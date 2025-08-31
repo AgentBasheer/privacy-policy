@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Licenses</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --container-bg: #ffffff;
+            --border-color: #dee2e6;
+            --link-color: #007bff;
+            --pre-bg: #f1f3f5;
+            --shadow-color: rgba(0, 0, 0, 0.05);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #e9ecef;
+                --container-bg: #1e1e1e;
+                --border-color: #495057;
+                --link-color: #80bfff;
+                --pre-bg: #2c2c2c;
+                --shadow-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 15px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: var(--container-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin: 0 0 10px;
+        }
+
+        .header p {
+            margin: 0;
+            color: #6c757d;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .header p {
+                color: #adb5bd;
+            }
+        }
+
+        .licenses-list {
+            padding: 10px;
+        }
+        
+        .license details {
+            margin-bottom: 10px;
+            background-color: transparent;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+        }
+
+        .license details[open] {
+            background-color: var(--pre-bg);
+        }
+        
+        .license summary {
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+            cursor: pointer;
+            list-style: none; /* Remove default marker */
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .license summary::-webkit-details-marker {
+            display: none; /* Hide for Safari */
+        }
+        
+        /* Custom chevron icon */
+        .license summary::after {
+            content: '›';
+            font-size: 1.8em;
+            font-weight: 300;
+            color: #6c757d;
+            transform: rotate(90deg);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .license details[open] summary::after {
+            transform: rotate(-90deg);
+        }
+        
+        .license-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .license-title {
+            margin: 0;
+            font-size: 1.05em;
+        }
+
+        .license-url {
+            font-size: 0.8em;
+            font-weight: 400;
+            color: var(--link-color);
+            text-decoration: none;
+            margin-top: 4px;
+        }
+        .license-url:hover {
+            text-decoration: underline;
+        }
+        
+        .license-text {
+            font-family: 'Menlo', 'Consolas', monospace;
+            font-size: 0.85em;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            background-color: var(--pre-bg);
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            overflow-x: auto;
+            color: var(--text-color);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85em;
+            color: #6c757d;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .footer {
+                color: #adb5bd;
+            }
+        }
+        
+        /* Larger screens */
+        @media (min-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            .header {
+                padding: 40px 30px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            .licenses-list {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Open Source Licenses</h1>
+            <p>This application is built with the help of the following open source software.</p>
+        </div>
+
+        <div class="licenses-list">
+            
+            <div class="license">
+                <details>
+                    <summary>
+                        <div class="license-info">
+                            <span class="license-title">AndroidX Libraries</span>
+                            <a href="https://developer.android.com/jetpack/androidx" class="license-url" target="_blank" rel="noopener">developer.android.com/jetpack/androidx</a>
+                        </div>
+                    </summary>
+                    <pre class="license-text">Copyright (C) 2020 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+                </details>
+            </div>
+
+            <div class="license">
+                <details>
+                    <summary>
+                        <div class="license-info">
+                            <span class="license-title">Jetpack Compose</span>
+                            <a href="https://developer.android.com/jetpack/compose" class="license-url" target="_blank" rel="noopener">developer.android.com/jetpack/compose</a>
+                        </div>
+                    </summary>
+                    <pre class="license-text">Copyright (C) 2020 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+                </details>
+            </div>
+
+            <div class="license">
+                <details>
+                    <summary>
+                        <div class="license-info">
+                            <span class="license-title">Koin</span>
+                            <a href="https://insert-koin.io/" class="license-url" target="_blank" rel="noopener">insert-koin.io</a>
+                        </div>
+                    </summary>
+                    <pre class="license-text">Copyright 2017-2023 Insert Koin IO
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+                </details>
+            </div>
+            
+            <div class="license">
+                <details>
+                    <summary>
+                        <div class="license-info">
+                            <span class="license-title">Coil</span>
+                            <a href="https://coil-kt.github.io/coil/" class="license-url" target="_blank" rel="noopener">coil-kt.github.io/coil</a>
+                        </div>
+                    </summary>
+                    <pre class="license-text">Copyright 2023 Coil Contributors
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+                </details>
+            </div>
+            
+            <div class="license">
+                <details>
+                    <summary>
+                        <div class="license-info">
+                            <span class="license-title">Accompanist</span>
+                            <a href="https://github.com/google/accompanist" class="license-url" target="_blank" rel="noopener">github.com/google/accompanist</a>
+                        </div>
+                    </summary>
+                    <pre class="license-text">Copyright 2020 Google LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+                </details>
+            </div>
+
+            <div class="license">
+                <details>
+                    <summary>
+                        <div class="license-info">
+                            <span class="license-title">OneSignal</span>
+                            <a href="https://onesignal.com/" class="license-url" target="_blank" rel="noopener">onesignal.com</a>
+                        </div>
+                    </summary>
+                    <pre class="license-text">Modified MIT License
+
+Copyright 2016 OneSignal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</pre>
+                </details>
+            </div>
+            
+            <div class="license">
+                <details>
+                    <summary>
+                        <div class="license-info">
+                            <span class="license-title">Firebase</span>
+                            <a href="https://firebase.google.com/" class="license-url" target="_blank" rel="noopener">firebase.google.com</a>
+                        </div>
+                    </summary>
+                    <pre class="license-text">Copyright 2020 Google LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+                </details>
+            </div>
+
+            <div class="license">
+                <details>
+                    <summary>
+                        <div class="license-info">
+                            <span class="license-title">JQuery</span>
+                            <a href="https://jquery.org/license/" class="license-url" target="_blank" rel="noopener">jquery.org/license</a>
+                        </div>
+                    </summary>
+                    <pre class="license-text">Copyright OpenJS Foundation and other contributors, https://openjsf.org/
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</pre>
+                </details>
+            </div>
+
+        </div>
+        
+        <div class="footer">
+            <p>This application may include other open source libraries not listed here. Please check the respective project repositories for complete licensing information.</p>
+        </div>
+    </div>
+
+</body>
+</html>
