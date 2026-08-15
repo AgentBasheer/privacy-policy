@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DarkBrowser - Privacy Policy</title>
+    <title>Dark Browser - Privacy Policy</title>
     <style>
         :root {
             --bg-color: #f6f8fa;
@@ -59,7 +59,7 @@
                 transform: translateY(0);
             }
         }
-        
+
         .header {
             text-align: center;
             padding: 48px 32px;
@@ -76,14 +76,14 @@
             color: var(--text-color);
             font-size: 1em;
         }
-        
+
         .content {
             padding: 16px 24px 32px;
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
-        
+
         details {
             border: 1px solid var(--border-color);
             border-radius: 12px;
@@ -93,7 +93,7 @@
         details[open] {
             border-color: var(--accent-color);
         }
-        
+
         summary {
             list-style: none;
             padding: 16px 20px;
@@ -114,6 +114,7 @@
             height: 20px;
             transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
             color: var(--icon-color);
+            flex-shrink: 0;
         }
 
         details[open] summary .chevron {
@@ -133,11 +134,30 @@
             margin-bottom: 0.8em;
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        th {
+            color: var(--heading-color);
+            font-weight: 600;
+        }
+
         ul {
             padding-left: 20px;
             list-style-type: none;
         }
-        
+
         li {
             position: relative;
             padding-left: 24px;
@@ -152,7 +172,7 @@
             color: var(--accent-color);
             font-weight: bold;
         }
-        
+
         strong {
             font-weight: 600;
             color: var(--heading-color);
@@ -166,7 +186,7 @@
         a:hover {
             text-decoration: underline;
         }
-        
+
         /* Media query for smaller screens */
         @media (max-width: 600px) {
             body { padding: 16px; }
@@ -174,6 +194,7 @@
             h1 { font-size: 1.8em; }
             .content { padding: 12px 16px 24px; }
             summary { font-size: 1em; padding: 14px 16px; }
+            table { font-size: 0.85em; }
         }
     </style>
 </head>
@@ -181,11 +202,11 @@
     <div class="container">
         <header class="header">
             <h1>Privacy Policy</h1>
-            <p class="effective-date">Last Updated: August 31, 2025</p>
+            <p class="effective-date">Last Updated: August 15, 2026</p>
         </header>
 
         <main class="content">
-            <details>
+            <details open>
                 <summary>
                     <span>Introduction</span>
                     <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -193,8 +214,33 @@
                     </svg>
                 </summary>
                 <div class="details-content">
-                    <p>Welcome to <strong>DarkBrowser</strong> ("the App"). We are committed to protecting your privacy. This policy outlines how we handle your information when you use our private browser application.</p>
-                    <p>By using the App, you agree to this policy. <strong>If you do not agree, please do not use the App.</strong></p>
+                    <p>Welcome to <strong>Dark Browser</strong> ("the App", "we", "us"), an independent, solo
+                    developer project by <strong>Dunesdev</strong>. This policy explains, in plain terms, what data
+                    the App collects, why, and what choices you have. It applies to the Dark Browser Android app and
+                    this policy page.</p>
+                    <p>By using the App, you agree to the practices described here. If you do not agree, please do
+                    not use the App.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <span>What Stays on Your Device</span>
+                    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <div class="details-content">
+                    <p>Dark Browser is designed to work without an account, and your browsing itself is never sent
+                    to us. The following stays on your device only:</p>
+                    <ul>
+                        <li>Browsing history, bookmarks, open tabs, and private/incognito tab contents</li>
+                        <li>Saved preferences — theme, default search engine, protection levels, extension settings</li>
+                        <li>Warden's local blocking statistics (ads/trackers blocked), visible only to you</li>
+                    </ul>
+                    <p>None of the above leaves your device unless you choose to export or share it yourself. Using
+                    <strong>Private tabs</strong>, <strong>Cleanup on Exit</strong>, or <strong>Burn a Tab</strong>
+                    removes the corresponding local data as described in the App.</p>
                 </div>
             </details>
 
@@ -206,19 +252,50 @@
                     </svg>
                 </summary>
                 <div class="details-content">
-                    <p>Our core principle is privacy. <strong>We do not collect personally identifiable information.</strong></p>
-                    <h3>Local Storage</h3>
-                    <p>To enhance your experience, the App saves settings locally on your device. This data is never sent to our servers. This includes:</p>
-                    <ul>
-                        <li>Theme and privacy preferences</li>
-                        <li>Bookmarks and favorites</li>
-                        <li>Tab and extension settings</li>
-                    </ul>
-                    <h3>Analytics Data</h3>
-                    <p>We use <strong>OneSignal</strong> (for notifications) and <strong>Firebase</strong> (for analytics) to collect limited, anonymous data to improve the App. This includes device type, usage stats, and crash reports. This data cannot identify you personally.</p>
+                    <p>We do not require an account and do not knowingly collect your name, home address, or
+                    government ID. The categories below are collected only in the specific situations described.</p>
+
+                    <h3>Diagnostics and usage (always on)</h3>
+                    <p>We use <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong> to
+                    understand app usage and diagnose crashes. This includes device model, OS version, app version,
+                    general usage/interaction events, and crash stack traces. <strong>Firebase App Check</strong>
+                    (via Play Integrity) verifies that requests to our backend come from a genuine, untampered copy
+                    of the App — it does not identify you personally. <strong>Firebase Remote Config</strong> is used
+                    to control feature rollout and does not carry personal data.</p>
+
+                    <h3>Push notifications (if enabled)</h3>
+                    <p>We use <strong>OneSignal</strong> to deliver optional push notifications. This involves a
+                    push token/device identifier and notification interaction events (e.g. whether a notification
+                    was opened). You can disable notifications at any time in your device settings.</p>
+
+                    <h3>Purchases and subscriptions</h3>
+                    <p>Premium features are purchased through <strong>Google Play Billing</strong> and managed with
+                    <strong>RevenueCat</strong>. RevenueCat receives purchase and subscription status, an
+                    anonymized customer identifier, and transaction metadata (plan type, renewal date) so we can
+                    unlock the features you paid for. We never see or store your payment card details — those are
+                    handled entirely by Google Play.</p>
+
+                    <h3>Feedback you submit</h3>
+                    <p>If you use the in-app Feedback Hub, your message, an optional reply-to email address, and
+                    basic diagnostics (app version, Android version, device manufacturer/model, locale, timezone,
+                    network type, dark-mode setting, and your subscription status) are sent to
+                    <strong>Web3Forms</strong>, a third-party form-delivery service, so we can receive and reply to
+                    your report. This is only sent when you actively submit feedback.</p>
+
+                    <h3>Permissions requested by websites</h3>
+                    <p>Dark Browser requests Camera, Microphone, and Location permissions at the Android level so
+                    that <em>websites you choose to visit</em> can ask for them (e.g. a video-call site needing your
+                    camera, a maps site needing your location). Each site request requires your explicit,
+                    per-site approval inside the browser. Any data captured this way goes directly from your device
+                    to that website — we do not receive, see, or store it.</p>
+
+                    <h3>Extensions</h3>
+                    <p>Installing an extension from the Mozilla Add-ons store, or using a bundled extension (e.g.
+                    Dark Reader, uBlock Origin), involves standard network requests to fetch the extension listing
+                    or files. These requests are handled by Mozilla's add-on infrastructure, not by us.</p>
                 </div>
             </details>
-            
+
             <details>
                 <summary>
                     <span>How We Use Information</span>
@@ -227,32 +304,42 @@
                     </svg>
                 </summary>
                 <div class="details-content">
-                    <p>We use the limited, anonymous data solely to:</p>
+                    <p>We use the data described above solely to:</p>
                     <ul>
-                        <li>Provide and maintain App functionality</li>
-                        <li>Improve and optimize performance</li>
-                        <li>Understand user interaction to guide development</li>
-                        <li>Diagnose and fix technical issues</li>
-                        <li>Send optional push notifications</li>
+                        <li>Provide, maintain, and secure App functionality</li>
+                        <li>Diagnose and fix crashes and technical issues</li>
+                        <li>Understand aggregate usage to guide development</li>
+                        <li>Deliver and manage the premium features you purchase</li>
+                        <li>Respond to feedback, bug reports, and support requests</li>
+                        <li>Send optional push notifications you have not disabled</li>
+                        <li>Detect and prevent abuse of our backend services</li>
                     </ul>
+                    <p>We do not use this data to build advertising profiles, and we do not use your browsing
+                    history for any purpose — it never reaches us in the first place.</p>
                 </div>
             </details>
-            
+
             <details>
                 <summary>
-                    <span>Information Sharing</span>
+                    <span>Third-Party Services</span>
                     <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
                     </svg>
                 </summary>
                 <div class="details-content">
-                    <p>We do not sell, trade, or rent your personal information. We do not share personally identifiable information because we do not collect it.</p>
-                    <h3>Third-Party Services</h3>
-                    <p>Our analytics partners operate under their own privacy policies:</p>
-                    <ul>
-                        <li><strong>OneSignal:</strong> <a href="https://onesignal.com/privacy_policy" target="_blank" rel="noopener">Privacy Policy</a></li>
-                        <li><strong>Firebase:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
-                    </ul>
+                    <p>We do not sell, rent, or trade your personal information. The services below process data on
+                    our behalf, each under its own privacy policy:</p>
+                    <table>
+                        <tr><th>Service</th><th>Purpose</th><th>Policy</th></tr>
+                        <tr><td>Firebase (Analytics, Crashlytics, App Check, Remote Config)</td><td>Diagnostics, crash reporting, integrity checks, feature flags</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+                        <tr><td>OneSignal</td><td>Push notifications</td><td><a href="https://onesignal.com/privacy_policy" target="_blank" rel="noopener">Link</a></td></tr>
+                        <tr><td>RevenueCat</td><td>Subscription and purchase management</td><td><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">Link</a></td></tr>
+                        <tr><td>Google Play Billing</td><td>Payment processing</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+                        <tr><td>Web3Forms</td><td>Delivering in-app feedback submissions</td><td><a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+                        <tr><td>Mozilla Add-ons</td><td>Browser extension listings and downloads</td><td><a href="https://www.mozilla.org/privacy/" target="_blank" rel="noopener">Link</a></td></tr>
+                    </table>
+                    <p>We may disclose information if required by law, to protect our legal rights, or to prevent
+                    fraud or abuse of the App.</p>
                 </div>
             </details>
 
@@ -264,33 +351,102 @@
                     </svg>
                 </summary>
                 <div class="details-content">
-                    <p>We offer optional in-app purchases and subscriptions to support the App's development.</p>
+                    <p>Dark Browser offers an optional premium subscription. Some protection settings (including
+                    advanced tracking/fingerprint protection levels and the Aggressive preset) and select extension
+                    screens are available only to premium subscribers.</p>
                     <ul>
-                        <li>Purchases are for support only and do not unlock extra features.</li>
-                        <li>All purchases are final and non-refundable.</li>
-                        <li>Transactions are processed securely by the Google Play Store.</li>
-                        <li>You can manage subscriptions in your Google Play account.</li>
+                        <li>Purchases and subscriptions are processed by Google Play Billing.</li>
+                        <li>Refunds are governed by Google Play's refund policy, not by us directly.</li>
+                        <li>You can view, manage, or cancel your subscription at any time from your Google Play account.</li>
                     </ul>
                 </div>
             </details>
-            
+
             <details>
                 <summary>
-                    <span>Your Rights & Data Control</span>
+                    <span>Data Retention</span>
                     <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
                     </svg>
                 </summary>
                 <div class="details-content">
-                     <p>You have full control over your data:</p>
-                    <ul>
-                        <li><strong>Access:</strong> View locally stored data in the App's settings.</li>
-                        <li><strong>Deletion:</strong> Clear all local data by uninstalling the App or clearing its data in your device settings.</li>
-                        <li><strong>Object:</strong> Opt out of analytics via your device's privacy settings.</li>
-                    </ul>
+                    <p>Locally stored data (history, bookmarks, tabs, preferences) is retained on your device until
+                    you clear it or uninstall the App. Diagnostic data (crash logs, analytics events) is retained by
+                    our service providers per their own retention schedules, typically for a limited number of
+                    months, and is not linked back to you individually. Feedback submissions are retained only as
+                    long as needed to review and respond to them.</p>
                 </div>
             </details>
-            
+
+            <details>
+                <summary>
+                    <span>Your Rights &amp; Choices</span>
+                    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <div class="details-content">
+                    <p>Depending on where you live (including under the EU/UK GDPR and the US CCPA/CPRA), you may
+                    have the right to access, correct, delete, or export data we hold about you, and to object to or
+                    restrict certain processing. We do not sell personal information as defined by the CCPA.</p>
+                    <ul>
+                        <li><strong>Access local data:</strong> view it directly in the App's settings.</li>
+                        <li><strong>Delete local data:</strong> clear App data or uninstall the App.</li>
+                        <li><strong>Notifications:</strong> disable push notifications in your device settings.</li>
+                        <li><strong>Site permissions:</strong> review or revoke camera/microphone/location access
+                        per site from the App's site-permission settings.</li>
+                        <li><strong>Diagnostics/analytics data held by our providers:</strong> contact us using the
+                        details below and we will help route your request.</li>
+                    </ul>
+                    <p>Because Dark Browser does not use accounts, we may not always be able to locate data tied to
+                    a specific individual within our third-party providers' systems; we will make reasonable efforts
+                    to assist with any request.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <span>International Data Transfers</span>
+                    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <div class="details-content">
+                    <p>Dark Browser is developed as an independent solo project. The third-party services listed
+                    above operate data centers in multiple countries, including the United States. Where data is
+                    transferred internationally, our providers rely on their own safeguards (such as standard
+                    contractual clauses) as described in their respective privacy policies.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <span>Children's Privacy</span>
+                    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <div class="details-content">
+                    <p>Dark Browser is not directed at children under 13 (or the minimum age required by your
+                    country), and we do not knowingly collect personal information from children. If you believe a
+                    child has provided us data through the Feedback Hub, contact us and we will delete it.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <span>Changes to This Policy</span>
+                    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                    </svg>
+                </summary>
+                <div class="details-content">
+                    <p>We may update this policy as the App changes. Material changes will be reflected by updating
+                    the "Last Updated" date at the top of this page. Continued use of the App after a change
+                    constitutes acceptance of the updated policy.</p>
+                </div>
+            </details>
+
             <details>
                 <summary>
                     <span>Contact Us</span>
@@ -299,7 +455,7 @@
                     </svg>
                 </summary>
                 <div class="details-content">
-                    <p>If you have any questions, please contact us at:</p>
+                    <p>Questions about this policy, or requests regarding your data, can be sent to:</p>
                     <p><a href="mailto:mk7039535@gmail.com">mk7039535@gmail.com</a></p>
                 </div>
             </details>
